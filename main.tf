@@ -240,3 +240,4 @@ output "instance_type" {
 output "created_by" {
     value = var.created_by_user
 }
+
