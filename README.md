@@ -1,31 +1,67 @@
-# terraform-file-structure
+# Terraform-file-structure
 
+This project creates:
 
-which creates EC2, Custom VPC, Custom Security Group(allow ssh, http, https)
+* EC2 instance
+* Custom VPC
+* Custom Security Group (allowing **SSH**, **HTTP**, **HTTPS**)
 
-Now runs these terraform commands to apply this structure ----
-** But before it you have - 
-    - AWS account with IAM user for AWS configure
-    - Terraform Installed in the system 
-    - Clone this repo by git clone <repo-link-here> | need to git installed before it 
-    - Go to folder where is main.tf is store
-    - You have to generate the ssh key, and give same name as the key-pair from the code or you can give your sutable name 
-    - Runs these commands 
-** To initilize the terraform to download the providers which is used in the code 
+---
+
+## ✅ Prerequisites
+
+Before running the Terraform commands, ensure you have:
+
+* An **AWS account** with an **IAM user** (configured via `aws configure`)
+
+* **Terraform** installed on your system
+
+* **Git** installed to clone the repository
+
+* Cloned this repo using:
+
+  ```bash
+  git clone <repo-link-here>
+  ```
+
+* Navigated into the folder containing `main.tf`:
+
+  ```bash
+  cd <repo-folder-name>
+  ```
+
+* Generated an **SSH key** with the same name used in the Terraform code for the `key_pair` (or modify the code to match your own key name)
+
+---
+
+## 🚀 Run These Terraform Commands
+
+### 1. Initialize Terraform (downloads required providers)
+
 ```bash
 terraform init
 ```
 
-** Then plan the structure 
+---
+
+### 2. Plan the Infrastructure
+
 ```bash
 terraform plan
 ```
 
-** Now apply the structure
+---
+
+### 3. Apply the Infrastructure
+
 ```bash
 terraform apply
 ```
-or you can use auto approve 
-```bash 
+
+or with auto-approve:
+
+```bash
 terraform apply -auto-approve
 ```
+
+---
